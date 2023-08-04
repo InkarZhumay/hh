@@ -154,7 +154,7 @@ module.exports = {
       'Аналитика в области виртуальной реальности'
     ];
 
-    for (let i=0; i<=skills.length; i++){
+    for (let i=0; i<skills.length; i++){
       skillsData.push({ name: skills[i] });
     }
 

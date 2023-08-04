@@ -5,14 +5,13 @@ const AuthCode = sequelize.define('AuthCode', {
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-
   },
   code: {
     type: DataTypes.STRING,
     allowNull: false,
   },
   valid_till: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DATE,
     allowNull: false,
   }, 
 },{

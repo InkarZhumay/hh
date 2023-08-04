@@ -7,7 +7,6 @@ const {upload} = require('./utils')
 
 router.post('/api/auth/sendmail', sendVerificationEmail)
 router.post('/api/auth/verifycode', verifyCode)
-
 router.post('/api/auth/signup', upload.single('company_logo'), validateSignUp, signUp)
 router.post('/api/auth/login', logIn)
 

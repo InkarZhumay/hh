@@ -61,3 +61,9 @@ const isApplyExists = async (req, res, next) =>{
         res.status(500).send(error)
     }
 }
+
+module.exports = {
+    validateApply,
+    isAuthorOfApply,
+    isApplyExists,
+}

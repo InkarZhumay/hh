@@ -2,7 +2,7 @@ const Country = require('../app/region/country')
 
 module.exports = {
   up: async (QueryInterface, Sequelize) => {
-    const Countries = await Country.findAll();
+    const countries = await Country.findAll();
     
     // QueryInterface.Sequelize.query(
     //   'SELECT id FROM Countries;'
@@ -12,66 +12,66 @@ module.exports = {
 
     const citiesData = [
       //города России
-      { name: 'Москва', countryID: countryRows[0].id},
-      { name: 'Санкт-Петербург', countryID: countryRows[0].id},
-      { name: 'Новосибирск', countryID: countryRows[0].id},
-      { name: 'Екатеринбург', countryID: countryRows[0].id},
-      { name: 'Казань', countryID: countryRows[0].id},
-      { name: 'Нижний Новгород', countryID: countryRows[0].id},
-      { name: 'Челябинск', countryID: countryRows[0].id},
-      { name: 'Самара', countryID: countryRows[0].id},
-      { name: 'Омск', countryID: countryRows[0].id},
+      { name: 'Москва', countryId: countryRows[0].id},
+      { name: 'Санкт-Петербург', countryId: countryRows[0].id},
+      { name: 'Новосибирск', countryId: countryRows[0].id},
+      { name: 'Екатеринбург', countryId: countryRows[0].id},
+      { name: 'Казань', countryId: countryRows[0].id},
+      { name: 'Нижний Новгород', countryId: countryRows[0].id},
+      { name: 'Челябинск', countryId: countryRows[0].id},
+      { name: 'Самара', countryId: countryRows[0].id},
+      { name: 'Омск', countryId: countryRows[0].id},
       //города Украины
-      { name: 'Киев', countryID: countryRows[1].id},
-      { name: 'Харьков', countryID: countryRows[1].id},
-      { name: 'Одесса', countryID: countryRows[1].id},
-      { name: 'Днепр', countryID: countryRows[1].id},
-      { name: 'Донецк', countryID: countryRows[1].id},
+      { name: 'Киев', countryId: countryRows[1].id},
+      { name: 'Харьков', countryId: countryRows[1].id},
+      { name: 'Одесса', countryId: countryRows[1].id},
+      { name: 'Днепр', countryId: countryRows[1].id},
+      { name: 'Донецк', countryId: countryRows[1].id},
       //города 
-      { name: 'Гомель', countryID: countryRows[2].id},
-      { name: 'Могилев', countryID: countryRows[2].id},
-      { name: 'Витебск', countryID: countryRows[2].id},
-      { name: 'Гродно', countryID: countryRows[2].id},
-      { name: 'Брест', countryID: countryRows[2].id},
+      { name: 'Гомель', countryId: countryRows[2].id},
+      { name: 'Могилев', countryId: countryRows[2].id},
+      { name: 'Витебск', countryId: countryRows[2].id},
+      { name: 'Гродно', countryId: countryRows[2].id},
+      { name: 'Брест', countryId: countryRows[2].id},
       //города Казахстана
-      { name: 'Нур-Султан', countryID: countryRows[3].id},
-      { name: 'Шымкент', countryID: countryRows[3].id},
-      { name: 'Караганда', countryID: countryRows[3].id},
-      { name: 'Актобе', countryID: countryRows[3].id},
-      { name: 'Тараз', countryID: countryRows[3].id},
-      { name: 'Павлодар', countryID: countryRows[3].id},
+      { name: 'Нур-Султан', countryId: countryRows[3].id},
+      { name: 'Шымкент', countryId: countryRows[3].id},
+      { name: 'Караганда', countryId: countryRows[3].id},
+      { name: 'Актобе', countryId: countryRows[3].id},
+      { name: 'Тараз', countryId: countryRows[3].id},
+      { name: 'Павлодар', countryId: countryRows[3].id},
       //города Армении
-      { name: 'Ереван', countryID: countryRows[4].id},
-      { name: 'Гюмри', countryID: countryRows[4].id},
-      { name: 'Ванадзор', countryID: countryRows[4].id},
-      { name: 'Армавир', countryID: countryRows[4].id},
+      { name: 'Ереван', countryId: countryRows[4].id},
+      { name: 'Гюмри', countryId: countryRows[4].id},
+      { name: 'Ванадзор', countryId: countryRows[4].id},
+      { name: 'Армавир', countryId: countryRows[4].id},
       //города Армении
-      { name: 'Баку', countryID: countryRows[5].id},
-      { name: 'Гянджа', countryID: countryRows[5].id},
+      { name: 'Баку', countryId: countryRows[5].id},
+      { name: 'Гянджа', countryId: countryRows[5].id},
       //города 
-      { name: 'Кутаиси', countryID: countryRows[6].id},
-      { name: 'Батуми', countryID: countryRows[6].id},
-      { name: 'Рустави', countryID: countryRows[6].id},
+      { name: 'Кутаиси', countryId: countryRows[6].id},
+      { name: 'Батуми', countryId: countryRows[6].id},
+      { name: 'Рустави', countryId: countryRows[6].id},
       //города Молдовы
-      { name: 'Кишинев', countryID: countryRows[7].id},
-      { name: 'Бельцы', countryID: countryRows[7].id},
-      { name: 'Тирасполь', countryID: countryRows[7].id},
-      { name: 'Бендеры', countryID: countryRows[7].id},
+      { name: 'Кишинев', countryId: countryRows[7].id},
+      { name: 'Бельцы', countryId: countryRows[7].id},
+      { name: 'Тирасполь', countryId: countryRows[7].id},
+      { name: 'Бендеры', countryId: countryRows[7].id},
       //города Таджикистана
-      { name: 'Душанбе', countryID: countryRows[8].id},
-      { name: 'Худжанд', countryID: countryRows[8].id},
-      { name: 'Куляб', countryID: countryRows[8].id},
-      { name: 'Курган-Тюбе', countryID: countryRows[8].id},
+      { name: 'Душанбе', countryId: countryRows[8].id},
+      { name: 'Худжанд', countryId: countryRows[8].id},
+      { name: 'Куляб', countryId: countryRows[8].id},
+      { name: 'Курган-Тюбе', countryId: countryRows[8].id},
       //города Туркменистана
-      { name: 'Ашхабад', countryID: countryRows[9].id},
-      { name: 'Туркменабад', countryID: countryRows[9].id},
-      { name: 'Дашогуз', countryID: countryRows[9].id},
-      { name: 'Мары', countryID: countryRows[9].id},
+      { name: 'Ашхабад', countryId: countryRows[9].id},
+      { name: 'Туркменабад', countryId: countryRows[9].id},
+      { name: 'Дашогуз', countryId: countryRows[9].id},
+      { name: 'Мары', countryId: countryRows[9].id},
       //города Узбекистана
-      { name: 'Ташкент', countryID: countryRows[10].id},
-      { name: 'Самарканд', countryID: countryRows[10].id},
-      { name: 'Наманган', countryID: countryRows[10].id},
-      { name: 'Андижан', countryID: countryRows[10].id},
+      { name: 'Ташкент', countryId: countryRows[10].id},
+      { name: 'Самарканд', countryId: countryRows[10].id},
+      { name: 'Наманган', countryId: countryRows[10].id},
+      { name: 'Андижан', countryId: countryRows[10].id},
     ];
 
     await QueryInterface.bulkInsert('Cities', citiesData, {});

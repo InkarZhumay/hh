@@ -36,31 +36,31 @@ const createApply = async (req, res) => {
 
 const getEmployeeApplies = async(req, res) => {
     try {
-    const resumes = await Resume.findAll({
-        where: {
-            userId: req.user.id
-        }
-    })
-
-    const ids = resumes.map(item => item.id)
-
-    const applies = await Apply.findAll({
-        where: {
-            resumeId: {[Op.in]: ids}
-        },
-        include: [
-            {
-                model: Vacancy,
-                as: 'vacancy'
+        const resumes = await Resume.findAll({
+            where: {
+                userId: req.user.id
             }
-        ]
-    });
+        })
 
-    res.status(200).send(applies)
-}catch(error){
-    res.status(500).send(error)
-}
-        
+        const ids = resumes.map(item => item.id)
+
+        const applies = await Apply.findAll({
+            where: {
+                resumeId: {[Op.in]: ids}
+            },
+            include: [
+                {
+                    model: Vacancy,
+                    as: 'vacancy'
+                }
+            ]
+        });
+
+        res.status(200).send(applies)
+    }catch(error){
+        res.status(500).send(error)
+    }
+            
 }
 
 const deleteApply = async (req, res) =>{

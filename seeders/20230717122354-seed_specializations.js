@@ -2616,9 +2616,9 @@ specializationTypes.forEach((item, index)=> {
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('specializationTypes', specializationTypesUpdated, {});
+    await queryInterface.bulkInsert('SpecializationTypes', specializationTypesUpdated, {});
 
-    await queryInterface.bulkInsert('specializations', specializationsUpdated, {});
+    await queryInterface.bulkInsert('Specializations', specializationsUpdated, {});
   },
 
   down: async (queryInterface, Sequelize) => {

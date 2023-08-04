@@ -30,6 +30,7 @@ const verifyCode = async (req, res) => {
     const authCode = await AuthCode.findOne({
         where: {email: req.body.email},
         order: [['valid_till', 'DESC']],
+        //get last auth code
     })
 
     if(!authCode){
@@ -40,15 +41,13 @@ const verifyCode = async (req, res) => {
         res.status(401).send({error: "code is invalid"});
     }
     else {
-        
-
         let user = await User.findOne({where: {email: req.body.email}});
         const role = await Role.findOne({where: {name: 'employee'}})
 
         if(!user) {
             
             user = await User.create ({
-                roleId: role.isSoftDeleted,
+                roleId: role.id,
                 email:req.body.email
             })
         }

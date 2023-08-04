@@ -14,14 +14,13 @@ module.exports = {
         allowNull: false
       },
       countryId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: true,
         references: {
-          model: 'Country',
+          model: 'Countries',
           key: 'id',
         },
         onUpdate: 'CASCADE',
-        // onDelete: 'SET NULL',
         onDelete: 'CASCADE',
       },
     });
