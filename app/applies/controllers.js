@@ -13,7 +13,7 @@ const createApply = async (req, res) => {
         const apply = await Apply.create({
             resumeId: req.body.resumeId,
             vacancyId: req.body.vacancyId,
-            ststus: NEW
+            status: NEW
         })
 
         const resume = await Resume.findByPk(req.body.resumeId)
@@ -30,8 +30,6 @@ const createApply = async (req, res) => {
     } catch (error) {
         res.status(500).send(error)
     }
-
-
 }
 
 const getEmployeeApplies = async(req, res) => {
@@ -151,8 +149,6 @@ const getVacancyApplies = async (req, res) =>{
         res.status(500).send(error)
     }
 }
-
-
 
 module.exports = {
     createApply,
