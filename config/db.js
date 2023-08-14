@@ -34,7 +34,7 @@ sequelize
         console.log('Connection to the database has been established successfully.');
     })
     .catch((error) => {
-        closeComplete.error('Unable to connect to the database:', error);
+        console.log('Unable to connect to the database:', error);
     });
 
 module.exports = sequelize;
