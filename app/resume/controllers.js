@@ -6,7 +6,7 @@ const resumeEmploymentType = require('./models/resumeEmploymentType')
 const employmentType = require('../employment-type/employmentType')
 const City = require('../region/city')
 const Country = require('../region/country')
-const { Op } = require('./routes')
+const { Op } = require('sequelize')
 
 const createResume = async(req, res) => {
 

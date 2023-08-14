@@ -4,8 +4,7 @@ const sendMail = require('../Utils/sendEmail')
 const Vacancy = require('../vacancy/models/Vacancy')
 const Resume = require('../resume/models/Resume')
 const User = require('../auth/User')
-const { Op } = require('./routes')
-const { where } = require('sequelize')
+const { where, Op } = require('sequelize')
 
 const createApply = async (req, res) => {
     // console.log(req.body);

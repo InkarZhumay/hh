@@ -2,6 +2,7 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const dbConf = require('./config')
+
 let sequelize;
 if(process.env.NODE_ENV === "production") {
     console.log("here");
@@ -17,9 +18,6 @@ if(process.env.NODE_ENV === "production") {
             },
         }
     });
-
-
-
 
 
 }else{

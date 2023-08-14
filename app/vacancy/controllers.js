@@ -5,7 +5,7 @@ const City = require('../region/city')
 const EmploymentType = require('../employment-type/employmentType')
 const Specialization = require('../specializations/models/Specialization')
 const Vacancy = require('./models/Vacancy')
-const { Op } = require('./routes')
+const { Op } = require('sequelize')
 
 const getExperiences = async (req, res) => {
 
